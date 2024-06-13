@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="user" class="cn.atsuc.spring.three.Emp">
+        <property name="eName" value="张三"/>
+        <property name="gender" value="man"/>
+<!--        级联控制-->
+        <property name="dept" ref="deptDemo"></property>
+        <property name="dept.dName" value="测试级联部"></property>
+    </bean>
+    <bean id="deptDemo" class="cn.atsuc.spring.three.Dept">
+        <property name="dName" value="财务部"></property>
+    </bean>
+</beans>

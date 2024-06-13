@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="collection" class="cn.atsuc.spring.four.collection.CollectionXML">
+<!--       数字类型注入-->
+        <property name="str">
+            <array>
+                <value>Java 数据结构</value>
+                <value>2 数据 </value>
+                <value>3 数</value>
+            </array>
+        </property>
+
+<!--        list类型-->
+        <property name="list">
+            <list>
+                <value>t1</value>
+                <value>t3</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="java" value="1"/>
+                <entry key="C" value="2"/>
+            </map>
+        </property>
+
+        <property name="sets">
+            <set>
+                <value>MySQL</value>
+                <value>Redis</value>
+            </set>
+        </property>
+    </bean>
+</beans>
+
+
